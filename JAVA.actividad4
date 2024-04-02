@@ -1,0 +1,81 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+
+
+public class actividad4 {
+    public static void actividad4(String[] args) {
+        // 1. Declarar una lista vacía
+        List<String> lst = new ArrayList<>();
+
+        // 2. Declarar una lista con más de 5 elementos
+        List<String> list1 = new ArrayList<>();
+        list1.add("Jaime");
+        list1.add("Enrique");
+        list1.add("Maria");
+        list1.add("Camila");
+
+        // 3. Encuentre la longitud de su lista
+        System.out.println(list1.size());
+
+        // 4. Obtener el primer elemento, el elemento central y el último elemento de la lista
+        List<String> proPlayers = new ArrayList<>();
+        proPlayers.add("m1ndfreak");
+        proPlayers.add("something");
+        proPlayers.add("forsaken");
+        proPlayers.add("d4v41");
+        proPlayers.add("Monyet");
+
+        String firstProPlayer = proPlayers.get(0);
+        System.out.println(firstProPlayer);
+        String midProPlayer = proPlayers.get(2);
+        System.out.println(midProPlayer);
+        String lastProPlayer = proPlayers.get(proPlayers.size() - 1);
+        System.out.println(lastProPlayer);
+
+        // 5. Declara una lista llamada tipos_datos_mezclados
+        List<String> tiposDatosMezclados = new ArrayList<>();
+        tiposDatosMezclados.add("Jaime");
+        tiposDatosMezclados.add("19");
+        tiposDatosMezclados.add("1.75");
+        tiposDatosMezclados.add("Soltero");
+        tiposDatosMezclados.add("Av.pedro romero,Barrio libano#48c43");
+
+        // 6. Declare una variable de lista llamada it_companies
+        List<String> itCompanies = new ArrayList<>();
+        itCompanies.add("Facebook");
+        itCompanies.add("Google");
+        itCompanies.add("Microsoft");
+        itCompanies.add("Apple");
+        itCompanies.add("IBM");
+        itCompanies.add("Amazon");
+        itCompanies.add("Oracle");
+
+        // 7. Añadir una empresa de TI a it_companies utilizando los métodos de inserción
+        itCompanies.add("Sony");
+        System.out.println(itCompanies);
+
+        // 8. Comprobar si una determinada empresa existe en la lista it_companies
+        if (itCompanies.contains("Google")) {
+            System.out.println("La empresa sí existe");
+        }
+
+        // 9. Ordena la lista con el método sort()
+        itCompanies.sort((a, b) -> a.compareToIgnoreCase(b));
+        System.out.println(itCompanies);
+
+        // 10. Invierte la lista en orden descendente utilizando el método reverse()
+        List<String> reversedCompanies = new ArrayList<>(itCompanies);
+        java.util.Collections.reverse(reversedCompanies);
+        System.out.println(reversedCompanies);
+
+        // 11. Elimine la primera empresa informática de la lista
+        itCompanies.remove(0);
+        System.out.println(itCompanies);
+
+        // 12. Eliminar todas las empresas de TI de la lista
+        itCompanies.clear();
+        System.out.println(itCompanies);
+    }
+}
